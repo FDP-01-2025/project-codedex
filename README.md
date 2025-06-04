@@ -10,20 +10,21 @@ Este proyecto consiste en un juego de aventuras donde el jugador debe explorar u
 
 ## Equipo
 
-- **Nombre del equipo:** [Nombre del equipo]
+- **Nombre del equipo:** Codedex ++
 
 ### Integrantes del equipo
 
-1. **Nombre completo:** [Nombre del estudiante 1]  
-   **Carnet:** [Carnet del estudiante 1]
+1. **Nombre completo:** Zepeda Cáceres, Alisson Ivania	  
+   **Carnet:** 00196625
 
-2. **Nombre completo:** [Nombre del estudiante 2]  
-   **Carnet:** [Carnet del estudiante 2]
+2. **Nombre completo:** Molina Alfaro, Jorge Andrés  
+   **Carnet:** 00108125
 
-3. **Nombre completo:** [Nombre del estudiante 3]  
-   **Carnet:** [Carnet del estudiante 3]
+3. **Nombre completo:** Ortiz Reyes, Guillermo Andrés	
+   **Carnet:** 00131725
 
-(Agregar más integrantes si es necesario)
+4. **Nombre completo:** Ramírez Chávez, Daniela Alexandra
+   **Carnet:** 00047025
 
 ## Instrucciones de Ejecución
 
