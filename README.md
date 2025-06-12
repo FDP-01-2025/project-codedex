@@ -1,12 +1,12 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/mi1WNrHU)
-# Proyecto de C++ - [Nombre del Juego]
+# Proyecto de C++ - [Quizz]
 
 ## Descripción del Proyecto
 
-Breve descripción del juego, su propósito, cómo se juega y cualquier otro detalle importante que describa la idea general del proyecto.
+Breve descripción del juego:
+Este proyecto es un juego de preguntas de cultura general desarrollado en C++. El juego está dividido en 10 niveles de dificultad progresiva. Cada nivel presenta más preguntas que el anterior, comenzando con 2 preguntas en el nivel 1 y aumentando gradualmente hasta el nivel 10. Las preguntas incluyen 4 opciones (a, b, c, d) y cubren temas variados como ciencia, historia, geografía, arte y conocimiento general.
 
-**Por ejemplo:**
-Este proyecto consiste en un juego de aventuras donde el jugador debe explorar un mundo virtual, recoger objetos, resolver acertijos y enfrentar enemigos. El juego utiliza estructuras de control como `if`, `switch`, y bucles `while` y `for` para generar interacciones dinámicas.
+El objetivo del juego es responder correctamente todas las preguntas de cada nivel para avanzar al siguiente. Ideal para reforzar el conocimiento y divertirse al mismo tiempo.
 
 ## Equipo
 
