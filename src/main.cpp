@@ -2,7 +2,15 @@
 #include <vector>
 #include <string>
 using namespace std;
-// Archivo main que contiene todas las funciones a utilizar dentro del proyecto
+// Archivo main que contiene todas las funciones a utilizar dentro del proyecto.
+
+// Definición de la clase Pregunta
+class Pregunta {
+public:
+    string enunciado;
+    vector<string> opciones;
+    char respuestaCorrecta;
+};
 
 // Función para mostrar una pregunta y obtener respuesta
 bool hacerPregunta(const Pregunta& p) {
