@@ -12,6 +12,29 @@ El objetivo del juego es responder correctamente todas las preguntas de cada niv
 
 El juego consiste en superar una serie de niveles de dificultad creciente respondiendo correctamente preguntas de cultura general. Cada nivel contiene un conjunto de preguntas con 4 opciones posibles (a, b, c, d), y el jugador debe elegir la opción correcta para avanzar.
 
+
+## Mecanica de juego
+
+1. **Inicio del juego:** 
+
+- El juego comienza en el nivel 1, con 2 preguntas.
+- Las preguntas se muestran una por una junto con sus opciones.
+
+2. **Selección de respuesta:**
+
+- El jugador elige su respuesta escribiendo la letra correspondiente (a, b, c o d).
+- El juego verifica si la respuesta es correcta.
+
+3. **Progresión de niveles:**
+
+- Si el jugador responde correctamente todas las preguntas del nivel actual, avanza al siguiente.
+- Con cada nivel, el número de preguntas aumenta en dificultad y cantidad (hasta llegar a 10 preguntas en el nivel 10).
+
+4. **Final del juego:**
+
+- El juego termina si el jugador completa exitosamente todos los niveles.
+- También puede terminar si el jugador falla, dependiendo de cómo hayas implementado las reglas (por ejemplo, si se permite un solo intento por pregunta o no).
+
 ## Equipo
 
 - **Nombre del equipo:** Codedex ++
