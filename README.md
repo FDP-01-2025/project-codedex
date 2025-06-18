@@ -8,6 +8,10 @@ Este proyecto es un juego de preguntas de cultura general desarrollado en C++. E
 
 El objetivo del juego es responder correctamente todas las preguntas de cada nivel para avanzar al siguiente. Ideal para reforzar el conocimiento y divertirse al mismo tiempo.
 
+## Idea general de la jugabilidad 
+
+El juego consiste en superar una serie de niveles de dificultad creciente respondiendo correctamente preguntas de cultura general. Cada nivel contiene un conjunto de preguntas con 4 opciones posibles (a, b, c, d), y el jugador debe elegir la opción correcta para avanzar.
+
 ## Equipo
 
 - **Nombre del equipo:** Codedex ++
