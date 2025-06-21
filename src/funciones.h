@@ -17,3 +17,7 @@ struct Nivel {
     Pregunta preguntas[5];
     int puntosPorRespuesta;
 };
+
+void inicializarNiveles(Nivel niveles[]);
+void mostrarPregunta(const Pregunta &q);
+void ejecutarJuego();
