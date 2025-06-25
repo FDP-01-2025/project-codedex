@@ -35,19 +35,18 @@ El juego consiste en superar una serie de niveles de dificultad creciente respon
 - El juego termina si el jugador completa exitosamente todos los niveles.
 - También puede terminar si el jugador falla, dependiendo de cómo hayas implementado las reglas (por ejemplo, si se permite un solo intento por pregunta o no).
 
+
+
 ## Equipo
 
 - **Nombre del equipo:** Codedex ++
 
 ### Integrantes del equipo
 
-1. **Nombre completo:** Zepeda Cáceres, Alisson Ivania	  
-   **Carnet:** 00196625
-
-2. **Nombre completo:** Ortiz Reyes, Guillermo Andrés	
+1. **Nombre completo:** Ortiz Reyes, Guillermo Andrés	
    **Carnet:** 00131725
 
-3. **Nombre completo:** Ramírez Chávez, Daniela Alexandra
+2. **Nombre completo:** Ramírez Chávez, Daniela Alexandra
    **Carnet:** 00047025
 
 ## Instrucciones de Ejecución

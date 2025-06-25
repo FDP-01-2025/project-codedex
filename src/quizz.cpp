@@ -18,11 +18,18 @@ void inicializarNiveles(Nivel niveles[])
 
     // Nivel 3
     niveles[2] = {
-        3, "Intermedio", {}, 30};
+        3, "Intermedio", {{"\n¿Quién escribió 'Cien años de soledad'?", {"Pablo Neruda", "Gabriel García Márquez", "Julio Cortázar", "Mario Vargas Llosa"}, 'b'}, 
+        {"¿Cuál es la estructura de datos para agrupar múltiples datos de diferente tipo?", {"vector", "array", "struct", "int"}, 'c'}, 
+        {"¿Qué bucle se ejecuta al menos una vez?", {"for", "do-while", "while", "switch"}, 'b'}, 
+        {"¿Qué operador se usa para comparar igualdad en C++?", {"=", "==", "!=", "<>"}, 'b'}}, 30};
 
     // Nivel 4
     niveles[3] = {
-        4, "Avanzado", {/*Poner preguntas de nivel 4.*/}, 40};
+        4, "Avanzado", { {"¿Cuál es la capital de Canadá?", "Toronto", "Vancouver", "Ottawa", "Montreal", 'c'},
+            {"¿Qué tipo de bucle se ejecuta al menos una vez?", "while", "do-while", "for", "foreach", 'b'},
+            {"¿Qué componente es el 'cerebro' de la computadora?", "RAM", "Disco Duro", "CPU", "GPU", 'c'},
+            {"¿Qué significa 'IDE'?", "Entorno de Desarrollo Integrado", "Editor de Imagen", "Intel Debugger", "Interfaz de Datos Ejecutables", 'a'},
+            {"¿Cuál es el símbolo para comentar una línea en C++?", "//", "/*", "#", "<!--", 'a'}}, 40};
 
     // Nivel 5
     niveles[4] = {
