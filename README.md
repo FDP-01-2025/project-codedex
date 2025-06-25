@@ -4,7 +4,7 @@
 ## Descripción del Proyecto
 
 Breve descripción del juego:
-Este proyecto es un juego de preguntas de cultura general desarrollado en C++. El juego está dividido en 10 niveles de dificultad progresiva. Cada nivel presenta más preguntas que el anterior, comenzando con 2 preguntas en el nivel 1 y aumentando gradualmente hasta el nivel 10. Las preguntas incluyen 4 opciones (a, b, c, d) y cubren temas variados como ciencia, historia, geografía, arte y conocimiento general.
+Este proyecto es un juego de preguntas de cultura general desarrollado en C++. El juego está dividido en 10 niveles de dificultad progresiva. Cada nivel presenta más preguntas que el anterior, comenzando con preguntas faciles en el nivel 1 y aumentando gradualmente hasta el nivel 10. Las preguntas incluyen 4 opciones (a, b, c, d) y cubren temas variados como ciencia, historia, geografía, arte y conocimiento general.
 
 El objetivo del juego es responder correctamente todas las preguntas de cada nivel para avanzar al siguiente. Ideal para reforzar el conocimiento y divertirse al mismo tiempo.
 
@@ -44,13 +44,10 @@ El juego consiste en superar una serie de niveles de dificultad creciente respon
 1. **Nombre completo:** Zepeda Cáceres, Alisson Ivania	  
    **Carnet:** 00196625
 
-2. **Nombre completo:** Molina Alfaro, Jorge Andrés  
-   **Carnet:** 00108125
-
-3. **Nombre completo:** Ortiz Reyes, Guillermo Andrés	
+2. **Nombre completo:** Ortiz Reyes, Guillermo Andrés	
    **Carnet:** 00131725
 
-4. **Nombre completo:** Ramírez Chávez, Daniela Alexandra
+3. **Nombre completo:** Ramírez Chávez, Daniela Alexandra
    **Carnet:** 00047025
 
 ## Instrucciones de Ejecución
