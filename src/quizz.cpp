@@ -49,7 +49,11 @@ void inicializarNiveles(Nivel niveles[])
 
     // Nivel 7
     niveles[6] = {
-        7, "Experto", {/*Poner preguntas de nivel 7*/}, 70};
+        7, "Experto", {{"¿Quién propuso la teoría de la relatividad?", "Newton", "Einstein", "Tesla", "Darwin", 'b'},
+            {"¿Qué palabra se usa para definir estructuras en C++?", "class", "struct", "define", "data", 'b'},
+            {"¿Qué operador se usa para comparación lógica OR?", "&&", "||", "|", "^", 'b'},
+            {"¿Qué bucle se usa cuando no sabes cuántas veces repetir?", "for", "while", "do-while", "loop", 'b'},
+            {"¿Qué es un compilador?", "Un editor", "Un error", "Un traductor de código", "Una librería", 'c'}}, 70};
 
     // Nivel 8
     niveles[7] = {

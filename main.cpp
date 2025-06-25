@@ -31,8 +31,10 @@ int main()
         }
     }
 
+    // El nivel actual va aumentand y se guarda el progreso del jugador al responder de forma correcta o incorrecta
     nivelActual++ guardarProgreso(nivelActual);
 
+    // Uso del condicional cuando el jugador complete todos los niveles
     if (nivelActual >= num_niveles)
     {
         cout << "¡Felicidades! Eres el super ganador de Quizz-UCA";
@@ -49,6 +51,7 @@ int main()
         }
     }
 
+    // Se termina el quizz
     cout << "Gracias por visitar Quizz-UCA, hasta la próxima :)";
     return 0;
 }

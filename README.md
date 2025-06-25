@@ -43,6 +43,8 @@ El juego consiste en superar una serie de niveles de dificultad creciente respon
 - Funciones: se utilizaron para almacenar y mostrar todas las preguntas del Quizz y ejecutar el juego
 - Entrada y salida de consola "cout y cin"
 - Estructuras condicionales 
+- Uso de ciclo for y while 
+- Variables y tipos de datos (int, char, string)
 
 ## Consideraciones técnicas del desarrollo
 
