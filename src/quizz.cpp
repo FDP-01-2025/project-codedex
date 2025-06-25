@@ -25,7 +25,29 @@ void inicializarNiveles(Nivel niveles[]) {
     niveles[4] = {
         5, "Desafiante", {/*Poner preguntas de nivel 5.*/}, 50
     };
-    
 
+     // Nivel 6
+    niveles[5] = {
+        6, "Dificil", {/*Poner preguntas de nivel 6.*/}, 60
+    };
 
+     // Nivel 7
+    niveles[6] = {
+        7, "Experto", {/*Poner preguntas de nivel 7*/}, 70
+    };
+
+     // Nivel 8
+    niveles[7] = {
+        8, "Maestro", {/*Poner preguntas de nivel 8.*/}, 80
+    };
+
+     // Nivel 9
+    niveles[8] = {
+        9, "Genio", {/*Poner preguntas de nivel 9.*/}, 90
+    };
+
+     // Nivel 10
+    niveles[9] = {
+        10, "Leyenda", {/*Poner preguntas de nivel 10.*/}, 100
+    };
 }
