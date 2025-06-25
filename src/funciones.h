@@ -11,6 +11,7 @@ struct Pregunta {
     char respuestaCorrecta; // 'A', 'B', 'C' or 'D'
 };
 
+//Struct con los datos que contendra cada nivel 
 struct Nivel {
     int numero;
     string dificultad;

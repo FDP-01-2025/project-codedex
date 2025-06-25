@@ -1,7 +1,6 @@
 #include "funciones.h"
 
-// Funcion que muestra las preguntas y posibles respuestas de cada nivel, al aumentar el nivel
-// se agregan mas preguntas con mayor dificuktad lo que hace que el Quizz sea mas emocinante
+// Funcion que muestra las preguntas y posibles respuestas de cada nivel, al responder de forma correcta se suman puntos y avanza de nivel
 
 void inicializarNiveles(Nivel niveles[])
 {
@@ -57,13 +56,25 @@ void inicializarNiveles(Nivel niveles[])
 
     // Nivel 8
     niveles[7] = {
-        8, "Maestro", {/*Poner preguntas de nivel 8.*/}, 80};
+        8, "Maestro", {{"¿Qué país tiene más habitantes en el mundo?", "EE.UU.", "India", "China", "Brasil", 'b'},
+            {"¿Qué operador se usa para negar en C++?", "!", "~", "not", "-", 'a'},
+            {"¿Qué es una función en programación?", "Un número", "Un bucle", "Un bloque de código reutilizable", "Una variable", 'c'},
+            {"¿Qué lenguaje es conocido por su simplicidad?", "Java", "Python", "C++", "Assembly", 'b'},
+            {"¿Qué tecnología permite guardar archivos en la nube?", "WiFi", "Bluetooth", "Cloud", "USB", 'c'}}, 80};
 
     // Nivel 9
     niveles[8] = {
-        9, "Genio", {/*Poner preguntas de nivel 9.*/}, 90};
+        9, "Genio", { {"¿Quién inventó el lenguaje C++?", "Bjarne Stroustrup", "Dennis Ritchie", "Linus Torvalds", "James Gosling", 'a'},
+            {"¿Qué operador se usa para acceder a miembros por puntero?", ".", "->", "&", "*", 'b'},
+            {"¿Qué es la recursividad?", "Un tipo de variable", "Una función que se llama a sí misma", "Un ciclo infinito", "Un error de sintaxis", 'b'},
+            {"¿Qué unidad mide la frecuencia de un procesador?", "Watts", "Bytes", "Hertz", "Ohms", 'c'},
+            {"¿Qué siglas representan inteligencia artificial?", "IA", "AI", "AR", "IE", 'b'}}, 90};
 
     // Nivel 10
     niveles[9] = {
-        10, "Leyenda", {/*Poner preguntas de nivel 10.*/}, 100};
+        10, "Leyenda", { {"¿Cuál es la capital de Australia?", "Sydney", "Melbourne", "Canberra", "Perth", 'c'},
+            {"¿Qué hace la función 'main' en C++?", "Nada", "Es la función principal", "Guarda variables", "Es una librería", 'b'},
+            {"¿Qué palabra se usa para manejar errores en C++?", "catch", "throw", "try", "error", 'c'},
+            {"¿Qué extensión se usa para archivos de cabecera?", ".cpp", ".exe", ".h", ".txt", 'c'},
+            {"¿Qué significa RAM?", "Read After Memory", "Random Access Memory", "Real Algorithm Machine", "Remote Access Module", 'b'}}, 100};
 }
