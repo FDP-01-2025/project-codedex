@@ -41,7 +41,7 @@ El juego consiste en superar una serie de niveles de dificultad creciente respon
 - Struct: se utilizo con la finalidad de almacenar variables de texto y respuesta para las preguntas de cada nivel 
 - Struct Nivel: su uso fue clave al realizar y definir la cantidad maxima de preguntas que cada nivel puede contener y los puntos a ganar 
 - Funciones: se utilizaron para almacenar y mostrar todas las preguntas del Quizz y ejecutar el juego
-- Entrada y salida de consolo cout y cin
+- Entrada y salida de consola "cout y cin"
 - Estructuras condicionales 
 
 ## Consideraciones técnicas del desarrollo
