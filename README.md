@@ -36,6 +36,23 @@ El juego consiste en superar una serie de niveles de dificultad creciente respon
 - También puede terminar si el jugador falla, dependiendo de cómo hayas implementado las reglas (por ejemplo, si se permite un solo intento por pregunta o no).
 
 
+## Aplicación de temas vistos 
+
+- Struct: se utilizo con la finalidad de almacenar variables de texto y respuesta para las preguntas de cada nivel 
+- Struct Nivel: su uso fue clave al realizar y definir la cantidad maxima de preguntas que cada nivel puede contener y los puntos a ganar 
+- Funciones: se utilizaron para almacenar y mostrar todas las preguntas del Quizz y ejecutar el juego
+- Entrada y salida de consolo cout y cin
+- Estructuras condicionales 
+
+## Consideraciones técnicas del desarrollo
+
+- Lenguaje de desarrollo principal: C++ 
+- Version de compilador: MSVC 
+- Arquitectura del proyecto: 
+         - **main.cpp** es quien ejecuta el flujo del juego 
+         - **funciones.h** contiene el codigo con las estructuras de las preguntas y niveles 
+         - **niveles.cpp** inicializa los niveles  
+
 
 ## Equipo
 

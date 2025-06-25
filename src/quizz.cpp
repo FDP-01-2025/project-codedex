@@ -33,7 +33,11 @@ void inicializarNiveles(Nivel niveles[])
 
     // Nivel 5
     niveles[4] = {
-        5, "Desafiante", {/*Poner preguntas de nivel 5.*/}, 50};
+        5, "Desafiante", {{"¿Quién pintó la Mona Lisa?", "Van Gogh", "Picasso", "Da Vinci", "Rembrandt", 'c'},
+            {"¿Qué es una variable en programación?", "Una constante", "Un valor fijo", "Un espacio de memoria para almacenar datos", "Un operador lógico", 'c'},
+            {"¿Qué operador lógico significa 'y'?", "||", "!", "&&", "&", 'c'},
+            {"¿Qué comando en C++ se usa para imprimir en pantalla?", "cin", "cout", "printf", "print", 'b'},
+            {"¿Qué es un 'bug' en programación?", "Una mejora", "Un error", "Un código secreto", "Un compilador", 'b'}}, 50};
 
     // Nivel 6
     niveles[5] = {
