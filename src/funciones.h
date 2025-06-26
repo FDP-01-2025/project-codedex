@@ -24,8 +24,6 @@ void ejecutarJuego();
 void guardarProgreso(); 
 
 
-
-
 //Funcion para mostrar las preguntas 
 void mostrarPregunta(const Pregunta &q){
 
