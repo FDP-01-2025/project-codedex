@@ -56,6 +56,10 @@ The game consists of overcoming a series of levels with increasing difficulty by
 
 - **Team name:** Codedex ++
 
+## Mockups 
+![alt text](image.png)
+![alt text](image-1.png)
+
 ### Team Members
 
 1. **Full name:** Ortiz Reyes, Guillermo Andrés  
