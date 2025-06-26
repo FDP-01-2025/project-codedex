@@ -11,26 +11,25 @@ void inicializarNiveles(Nivel niveles[])
             {"\n¿Qué tipo de dato se usa para números enteros en C++?", "int", "float", "char", "bool", 'A'}, 
             {"\n¿En qué año llegó el hombre a la Luna?", "1965", "1969", "1972", "1959", 'B'},
             {"\n¿Cuál es el idioma más hablado en el mundo?", "Español", "Inglés", "Chino mandarín", "Hindi", 'C'},
-            {"\n¿Qué científico desarrolló la teoría de la evolución?", "Einstein", "Darwin", "Newton", "Pasteur", 'B'}
-        }, 
-        10
-    };
+            {"\n¿Qué científico desarrolló la teoría de la evolución?", "Einstein", "Darwin", "Newton", "Pasteur", 'B'}}, 10};
     
     // Nivel 2
     niveles[1] = {
-        2, "Basico", {{"\n¿Cuántos continentes hay en el mundo?", {"5", "6", "7", "8"}, 'c'}, 
-        {"¿Qué estructura se usa para decisiones múltiples en C++?", {"if", "while", "for", "switch"}, 'd'}, 
-        {"¿Cuál es el resultado de 5 % 2 en C++?", {"2.5", "0", "1", "2"}, 'c'}, 
-        {"\n¿Qué palabra clave define una clase en C++?", {"class", "struct", "define", "module"}, 'a'},
-        {"¿Qué estructura de datos funciona como una fila (FIFO)?", {"Stack", "Queue", "Array", "Tree"}, 'b'}}, 20};
+        2, "Basico", {
+        {"\n¿Cuántos continentes hay en el mundo?", "5", "6", "7", "8", 'c'}, 
+        {"\n¿Qué estructura se usa para decisiones múltiples en C++?", "if", "while", "for", "switch", 'd'}, 
+        {"\n¿Cuál es el resultado de 5 % 2 en C++?", "2.5", "0", "1", "2", 'c'}, 
+        {"\n¿Qué palabra clave define una clase en C++?", "class", "struct", "define", "module", 'a'},
+        {"\n¿Qué estructura de datos funciona como una fila (FIFO)?", "Stack", "Queue", "Array", "Tree", 'b'}}, 20};
 
     // Nivel 3
     niveles[2] = {
-        3, "Intermedio", {{"\n¿Quién escribió 'Cien años de soledad'?", {"Pablo Neruda", "Gabriel García Márquez", "Julio Cortázar", "Mario Vargas Llosa"}, 'b'}, 
-        {"¿Cuál es la estructura de datos para agrupar múltiples datos de diferente tipo?", {"vector", "array", "struct", "int"}, 'c'}, 
-        {"¿Qué bucle se ejecuta al menos una vez?", {"for", "do-while", "while", "switch"}, 'b'}, 
-        {"¿Qué operador se usa para comparar igualdad en C++?", {"=", "==", "!=", "<>"}, 'b'},
-        {"¿Qué función se usa para obtener la longitud de un string en C++?", {"size()", "length()", "count()", "len()"}, 'b'}}, 30};
+        3, "Intermedio", {
+        {"\n¿Quién escribió 'Cien años de soledad'?", "Pablo Neruda", "Gabriel García Márquez", "Julio Cortázar", "Mario Vargas Llosa", 'b'}, 
+        {"¿Cuál es la estructura de datos para agrupar múltiples datos de diferente tipo?", "vector", "array", "struct", "int", 'c'}, 
+        {"¿Qué bucle se ejecuta al menos una vez?", "for", "do-while", "while", "switch", 'b'}, 
+        {"¿Qué operador se usa para comparar igualdad en C++?", "=", "==", "!=", "<>", 'b'},
+        {"¿Qué función se usa para obtener la longitud de un string en C++?", "size()", "length()", "count()", "len()", 'b'}}, 30};
 
     // Nivel 4
     niveles[3] = {
@@ -88,3 +87,13 @@ void inicializarNiveles(Nivel niveles[])
             {"¿Qué extensión se usa para archivos de cabecera?", ".cpp", ".exe", ".h", ".txt", 'c'},
             {"¿Qué significa RAM?", "Read After Memory", "Random Access Memory", "Real Algorithm Machine", "Remote Access Module", 'b'}}, 100};
 }
+
+// Función que recibe una pregunta (tipo Pregunta) y muestra su texto y las cuatro opciones posibles.
+// No modifica la pregunta recibida, solo la muestra al usuario.
+void mostrarPregunta(const Pregunta &p) {
+    cout << "\n" << p.texto << "\n";
+    cout << "A) " << p.opcionA << "\n";
+    cout << "B) " << p.opcionB << "\n";
+    cout << "C) " << p.opcionC << "\n";
+    cout << "D) " << p.opcionD << "\n";
+    }
