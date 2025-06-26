@@ -13,7 +13,7 @@ void inicializarNiveles(Nivel niveles[])
             {"\n¿Cuál es el idioma más hablado en el mundo?", "Español", "Inglés", "Chino mandarín", "Hindi", 'C'},
             {"\n¿Qué científico desarrolló la teoría de la evolución?", "Einstein", "Darwin", "Newton", "Pasteur", 'B'}}, 10};
     
-    // Nivel 2
+    // Nivel 2  
     niveles[1] = {
         2, "Basico", {
         {"\n¿Cuántos continentes hay en el mundo?", "5", "6", "7", "8", 'c'}, 
@@ -90,7 +90,7 @@ void inicializarNiveles(Nivel niveles[])
 
 // Función que recibe una pregunta (tipo Pregunta) y muestra su texto y las cuatro opciones posibles.
 // No modifica la pregunta recibida, solo la muestra al usuario.
-void mostrarPregunta(const Pregunta &p) {
+void mostrarPregunta(const Pregunta p) {
     cout << "\n" << p.texto << "\n";
     cout << "A) " << p.opcionA << "\n";
     cout << "B) " << p.opcionB << "\n";
@@ -102,4 +102,59 @@ void mostrarPregunta(const Pregunta &p) {
     const int NUM_NIVELES = 10; //definicion de constante
     Nivel niveles[NUM_NIVELES]; //arreglo de 10 elementos de tipo nivel
     inicializarNiveles(niveles); //Se llama a inicializarNiveles(niveles) para llenar cada nivel con sus preguntas, dificultad y puntaje.
+
+    int puntosTotales = 0; // Se inicializa un contador para llevar los puntos acumulados del jugador.
+    
+
+    cout << "Bienvenido al Juego de Preguntas por Niveles!\n";   //Mensaje de bienvenida.
+    cout << "Responde correctamente para avanzar y ganar puntos.\n\n"; //se imprimen instrucciones basicas.
+    
+    //ciclo principal para recorrer cada nivel.
+    for (int i = 0; i < NUM_NIVELES; ++i) {
+        Nivel nivelActual = niveles[i]; 
+        
+        //Se muestra en qué nivel estás y cuántos puntos vale cada respuesta.
+        cout << "=== NIVEL " << nivelActual.numero << " (" << nivelActual.dificultad << ") ===\n";
+        cout << "Puntos por respuesta correcta: " << nivelActual.puntosPorRespuesta << "\n\n";
+        
+        //Se inicializa un contador de respuestas correctas para el nivel actual.
+        int respuestasCorrectas = 0;
+        
+        for (int j = 0; j < 5; ++j) {  //Cada nivel tiene 5 preguntas. Este ciclo las recorre una por una.
+           
+            //Se llama a la función mostrarPregunta para ver la pregunta actual.
+            mostrarPregunta(nivelActual.preguntas[j]);
+            char respuesta;
+            cout << "Tu respuesta (A-D): "; //Se pide al usuario que escriba su respuesta (letra A-D).
+            cin >> respuesta;
+            
+            if (toupper(respuesta) == nivelActual.preguntas[j].respuestaCorrecta) {
+                cout << "Correcto! +" << nivelActual.puntosPorRespuesta << " puntos\n";
+                puntosTotales += nivelActual.puntosPorRespuesta;
+                respuestasCorrectas++;
+            } else {
+                cout << "Incorrecto. La respuesta correcta era: " 
+                     << nivelActual.preguntas[j].respuestaCorrecta << "\n";
+            }
+        }
+        
+        cout << "\nNivel " << nivelActual.numero << " completado!\n";
+        cout << "Respuestas correctas: " << respuestasCorrectas << "/5\n";
+        cout << "Puntos totales: " << puntosTotales << "\n\n";
+        
+        if (i < NUM_NIVELES - 1) {
+            char continuar;
+            cout << "Continuar al siguiente nivel? (S/N): ";
+            cin >> continuar;
+            
+            if (toupper(continuar) != 'S') {
+                cout << "Fin del juego. Gracias por jugar!:D\n";
+                return;
+            }
+        }
     }
+    
+    cout << "Felicidades! Has completado todos los niveles.\n";
+    cout << "Puntuacion final: " << puntosTotales << " puntos.\n";
+    }
+
