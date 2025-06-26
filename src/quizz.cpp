@@ -97,3 +97,9 @@ void mostrarPregunta(const Pregunta &p) {
     cout << "C) " << p.opcionC << "\n";
     cout << "D) " << p.opcionD << "\n";
     }
+
+    void ejecutarJuego() {//falta desarrollar las frases y for de niveles de juego
+    const int NUM_NIVELES = 10; //definicion de constante
+    Nivel niveles[NUM_NIVELES]; //arreglo de 10 elementos de tipo nivel
+    inicializarNiveles(niveles); //Se llama a inicializarNiveles(niveles) para llenar cada nivel con sus preguntas, dificultad y puntaje.
+    }
