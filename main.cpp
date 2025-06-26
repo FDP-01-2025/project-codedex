@@ -1,9 +1,6 @@
-#include <iostream>
-#include "funciones.h" // Se incluye el archivo .h donde tenemos las funciones del juego
+#include "src/funciones.h"
 
-int main()
-{
-
-
+int main() {
+    ejecutarJuego();
     return 0;
 }
