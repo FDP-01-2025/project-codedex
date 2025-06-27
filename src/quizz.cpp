@@ -128,6 +128,8 @@ void mostrarPregunta(const Pregunta p) {
             cout << "Tu respuesta (A-D): "; //Se pide al usuario que escriba su respuesta (letra A-D).
             cin >> respuesta;
             
+            //Se convierte la respuesta a mayúscula para evitar errores de mayúsculas/minúsculas.
+            //Se compara con la respuesta correcta.
             if (toupper(respuesta) == nivelActual.preguntas[j].respuestaCorrecta) {
                 cout << "Correcto! +" << nivelActual.puntosPorRespuesta << " puntos\n";
                 puntosTotales += nivelActual.puntosPorRespuesta;
@@ -138,16 +140,18 @@ void mostrarPregunta(const Pregunta p) {
             }
         }
         
+
+        //Se muestra resumen del nivel: aciertos y puntos acumulados.
         cout << "\nNivel " << nivelActual.numero << " completado!\n";
         cout << "Respuestas correctas: " << respuestasCorrectas << "/5\n";
         cout << "Puntos totales: " << puntosTotales << "\n\n";
         
         if (i < NUM_NIVELES - 1) {
             char continuar;
-            cout << "Continuar al siguiente nivel? (S/N): ";
+            cout << "Continuar al siguiente nivel? (S/N): "; //Si no es el último nivel, se le pregunta al usuario si quiere seguir.
             cin >> continuar;
             
-            if (toupper(continuar) != 'S') {
+            if (toupper(continuar) != 'S') { //Si dice que no (N o cualquier letra distinta de S), se termina el juego.
                 cout << "Fin del juego. Gracias por jugar!:D\n";
                 return;
             }
