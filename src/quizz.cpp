@@ -112,6 +112,7 @@ void mostrarPregunta(const Pregunta p) {
     //ciclo principal para recorrer cada nivel.
     for (int i = 0; i < NUM_NIVELES; ++i) {
         Nivel nivelActual = niveles[i]; 
+        int puntosNivel = 0; //inicializar el contador de puntos obtenidos en cada nivel.
         
         //Se muestra en qué nivel estás y cuántos puntos vale cada respuesta.
         cout << "=== NIVEL " << nivelActual.numero << " (" << nivelActual.dificultad << ") ===\n";
@@ -134,7 +135,7 @@ void mostrarPregunta(const Pregunta p) {
             //Se compara con la respuesta correcta.
             if (respuesta == nivelActual.preguntas[j].respuestaCorrecta) {
                 cout << "Correcto! +" << nivelActual.puntosPorRespuesta << " puntos\n";
-                puntosTotales += nivelActual.puntosPorRespuesta;
+                puntosNivel += nivelActual.puntosPorRespuesta;
                 respuestasCorrectas++;
             } else {
                 cout << "Incorrecto. La respuesta correcta era: " 
@@ -147,11 +148,14 @@ void mostrarPregunta(const Pregunta p) {
             
         }
         
+         // Se suma al total solo si completó el nivel
+        puntosTotales += puntosNivel;
 
         //Se muestra resumen del nivel: aciertos y puntos acumulados.
-        cout << "\nNivel " << nivelActual.numero << " completado!\n";
-        cout << "Respuestas correctas: " << respuestasCorrectas << "/5\n";
-        cout << "Puntos totales: " << puntosTotales << "\n\n";
+    cout << "\nHas completado el nivel " << nivelActual.numero << "!\n";
+    cout << "Respuestas correctas: " << respuestasCorrectas << "/5\n";
+    cout << "Puntos obtenidos en este nivel: " << puntosNivel << "\n";
+    cout << "Puntos acumulados: " << puntosTotales << "\n\n";
         
         if (i < NUM_NIVELES - 1) {
             char continuar;
@@ -159,7 +163,9 @@ void mostrarPregunta(const Pregunta p) {
             cin >> continuar;
             
             if (toupper(continuar) != 'S') { //Si dice que no (N o cualquier letra distinta de S), se termina el juego.
-                cout << "Fin del juego. Gracias por jugar!:D\n";
+                cout << "\nHas decidido salir del juego.\n";
+                cout << "Puntuación total acumulada: " << puntosTotales << " puntos.\n";
+                cout << "¡Gracias por jugar! :D\n";
                 return;
             }
         }
