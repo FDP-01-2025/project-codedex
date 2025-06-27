@@ -1,6 +1,6 @@
 #include "src/funciones.h"
 
 int main() {
-    ejecutarJuego();
+    executeGame();
     return 0;
 }

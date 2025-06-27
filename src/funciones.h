@@ -2,24 +2,24 @@
 
 using namespace std;
 
-struct Pregunta {
-    string texto;
-    string opcionA;
-    string opcionB;
-    string opcionC;
-    string opcionD;
-    char respuestaCorrecta; // 'A', 'B', 'C' or 'D'
+struct Question {
+    string text;
+    string optionA;
+    string optionB;
+    string optionC;
+    string optionD;
+    char correctAnswer; // 'A', 'B', 'C' or 'D'
 };
 
 //Struct con los datos que contendra cada nivel 
-struct Nivel {
-    int numero;
-    string dificultad;
-    Pregunta preguntas[5];
-    int puntosPorRespuesta;
+struct Level {
+    int numbers;
+    string difficulty;
+    Question questions[5];
+    int pointsForAnswer;
 };
 
-void inicializarNiveles(Nivel niveles[]);
-void mostrarPregunta(const Pregunta q);
-void ejecutarJuego();
+void initializateLevel(Level levels[]);
+void showQuestion(const Question q);
+void executeGame();
 
