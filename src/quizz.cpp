@@ -120,17 +120,19 @@ void mostrarPregunta(const Pregunta p) {
         //Se inicializa un contador de respuestas correctas para el nivel actual.
         int respuestasCorrectas = 0;
         
-        for (int j = 0; j < 5; ++j) {  //Cada nivel tiene 5 preguntas. Este ciclo las recorre una por una.
+        for (int j = 0; j < 5; ++j){  //Cada nivel tiene 5 preguntas, este ciclo las recorre una por una.
            
             //Se llama a la función mostrarPregunta para ver la pregunta actual.
             mostrarPregunta(nivelActual.preguntas[j]);
             char respuesta;
             cout << "Tu respuesta (A-D): "; //Se pide al usuario que escriba su respuesta (letra A-D).
             cin >> respuesta;
+            respuesta = toupper(respuesta); //Se convierte la respuesta a mayúscula para evitar errores de mayúsculas/minúsculas.
             
-            //Se convierte la respuesta a mayúscula para evitar errores de mayúsculas/minúsculas.
+        //Se realiza la validacion de la opcion de respuesta ingresada.
+        if(respuesta == 'A' || respuesta == 'B' || respuesta == 'C' || respuesta == 'D'){
             //Se compara con la respuesta correcta.
-            if (toupper(respuesta) == nivelActual.preguntas[j].respuestaCorrecta) {
+            if (respuesta == nivelActual.preguntas[j].respuestaCorrecta) {
                 cout << "Correcto! +" << nivelActual.puntosPorRespuesta << " puntos\n";
                 puntosTotales += nivelActual.puntosPorRespuesta;
                 respuestasCorrectas++;
@@ -138,6 +140,11 @@ void mostrarPregunta(const Pregunta p) {
                 cout << "Incorrecto. La respuesta correcta era: " 
                      << nivelActual.preguntas[j].respuestaCorrecta << "\n";
             }
+        }else{
+            cout << "Ingrese una respuesta válida (A, B, C o D).\n";
+            --j; // Volver a intentar esta misma pregunta
+        }
+            
         }
         
 
