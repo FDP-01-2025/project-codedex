@@ -132,11 +132,11 @@ void executeGame() {
 
             if (answer == 'A' || answer == 'B' || answer == 'C' || answer == 'D') {
                 if (answer == currentLevel.questions[j].correctAnswer) {
-                    cout << " :tada: Correct! You're n fire :fire: +" << currentLevel.pointsForAnswer << " points\n";
+                    cout << "Correct! You're n fire :fire: +" << currentLevel.pointsForAnswer << " points\n";
                     pointsLevel += currentLevel.pointsForAnswer;
                     rightAnswer++;
                 } else {
-                    cout << ":triangular_flag_on_post: Incorrect. The correct answer was: "
+                    cout << "Incorrect. The correct answer was: "
                          << currentLevel.questions[j].correctAnswer << "\n";
                 }
             } else {
@@ -148,9 +148,9 @@ void executeGame() {
         finalPoints += pointsLevel;
 
         cout << "\n :rocket: You have completed level " << currentLevel.numbers << "!\n";
-        cout << ":memo: Correct answers: " << rightAnswer << "/5\n";
-        cout << ":white_check_mark: Points earned in this level: " << pointsLevel << "\n";
-        cout << ":heavy_plus_sign: Total accumulated points: " << finalPoints << "\n\n";
+        cout << "Correct answers: " << rightAnswer << "/5\n";
+        cout << "Points earned in this level: " << pointsLevel << "\n";
+        cout << "Total accumulated points: " << finalPoints << "\n\n";
 
         if (i < NUM_LEVELS - 1) {
             char next;
@@ -159,13 +159,13 @@ void executeGame() {
 
             if (toupper(next) != 'Y') {
                 cout << "\nYou decided to quit the game.\n";
-                cout << ":bookmark: Total accumulated score: " << finalPoints << " points.\n";
-                cout << ":boom: Thanks for playing! :D :boom:\n";
+                cout << "Total accumulated score: " << finalPoints << " points.\n";
+                cout << "Thanks for playing! :D\n";
                 return;
             }
         }
     }
 
-    cout << ":tada: Congratulations! You've completed all levels.\n";
-    cout << ":sparkles: Final score: " << finalPoints << " points.\n";
+    cout << "Congratulations! You've completed all levels.\n";
+    cout << "Final score: " << finalPoints << " points.\n";
 }
