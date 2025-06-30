@@ -126,13 +126,19 @@ void executeGame() {
         for (int j = 0; j < 5; ++j) {
             showQuestion(currentLevel.questions[j]);
             char answer;
-            cout << "Your answer (A-D): ";
+            cout << "Your answer (A-D or X to exit): ";
             cin >> answer;
             answer = toupper(answer);
 
+            if (answer == 'X') {
+            cout << "\nYou have chosen to exit the game. Thanks for playing!\n";
+            cout << "Final score: " << finalPoints << " points.\n";
+            return; // Termina el juego inmediatamente.
+}
+
             if (answer == 'A' || answer == 'B' || answer == 'C' || answer == 'D') {
                 if (answer == currentLevel.questions[j].correctAnswer) {
-                    cout << "Correct! You're n fire :fire: +" << currentLevel.pointsForAnswer << " points\n";
+                    cout << "Correct! You're n fire +" << currentLevel.pointsForAnswer << " points\n";
                     pointsLevel += currentLevel.pointsForAnswer;
                     rightAnswer++;
                 } else {
@@ -147,7 +153,7 @@ void executeGame() {
 
         finalPoints += pointsLevel;
 
-        cout << "\n :rocket: You have completed level " << currentLevel.numbers << "!\n";
+        cout << "\n You have completed level " << currentLevel.numbers << "!\n";
         cout << "Correct answers: " << rightAnswer << "/5\n";
         cout << "Points earned in this level: " << pointsLevel << "\n";
         cout << "Total accumulated points: " << finalPoints << "\n\n";
