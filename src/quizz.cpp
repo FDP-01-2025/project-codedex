@@ -1,6 +1,6 @@
 #include "funciones.h"
 
-// Function that initializes the questions and options for each level
+//Función que inicializa las preguntas y opciones para cada nivel
 void initializateLevel(Level levels[])
 {
     // Level 1
@@ -94,7 +94,8 @@ void initializateLevel(Level levels[])
             {"What does RAM stand for?", "Read After Memory", "Random Access Memory", "Real Algorithm Machine", "Remote Access Module", 'B'}}, 100};
 }
 
-// Shows a question and the options
+// Función que recibe una pregunta (tipo Pregunta) y muestra su texto y las cuatro opciones posibles.
+// No modifica la pregunta recibida, solo la muestra al usuario.
 void showQuestion(const Question p) {
     cout << "\n" << p.text << "\n";
     cout << "A) " << p.optionA << "\n";
@@ -103,39 +104,43 @@ void showQuestion(const Question p) {
     cout << "D) " << p.optionD << "\n";
 }
 
-// Game execution logic
+ //Lógica de ejecución del juego
 void executeGame() {
     const int NUM_LEVELS = 10;
-    Level levels[NUM_LEVELS];
-    initializateLevel(levels);
+    Level levels[NUM_LEVELS]; //arreglo de 10 elementos de tipo nivel
+    initializateLevel(levels); //Se llama a inicializarNiveles(niveles) para llenar cada nivel con sus preguntas, dificultad y puntaje.
 
-    int finalPoints = 0;
+    int finalPoints = 0; // Se inicializa un contador para llevar los puntos acumulados del jugador.
 
-    cout << "Welcome to the Level-Based Quiz Game!\n";
-    cout << "Answer correctly to advance and earn points.\n\n";
+    cout << "Welcome to the Level-Based Quiz Game!\n"; //Mensaje de bienvenida.
+    cout << "Answer correctly to advance and earn points.\n\n"; //se imprimen instrucciones basicas.
 
+    //ciclo principal para recorrer cada nivel.
     for (int i = 0; i < NUM_LEVELS; ++i) {
         Level currentLevel = levels[i];
-        int pointsLevel = 0;
+        int pointsLevel = 0; //inicializar el contador de puntos obtenidos en cada nivel.
 
         cout << "=== LEVEL " << currentLevel.numbers << " (" << currentLevel.difficulty << ") ===\n";
         cout << "Points per correct answer: " << currentLevel.pointsForAnswer << "\n\n";
 
+        //Se inicializa un contador de respuestas correctas para el nivel actual.
         int rightAnswer = 0;
 
-        for (int j = 0; j < 5; ++j) {
+        for (int j = 0; j < 5; ++j) {   //Cada nivel tiene 5 preguntas. Este ciclo las recorre una por una.
+
+             //Se llama a la función mostrarPregunta para ver la pregunta actual.
             showQuestion(currentLevel.questions[j]);
             char answer;
-            cout << "Your answer (A-D or X to exit): ";
+            cout << "Your answer (A-D or X to exit): "; //Se pide al usuario que escriba su respuesta (letra A-D).
             cin >> answer;
-            answer = toupper(answer);
+            answer = toupper(answer); //Se convierte la respuesta a mayuscula.
 
             if (answer == 'X') {
             cout << "\nYou have chosen to exit the game. Thanks for playing!\n";
             cout << "Final score: " << finalPoints << " points.\n";
             return; // Termina el juego inmediatamente.
 }
-
+            //Realizar validación de opcion de respuesta.   
             if (answer == 'A' || answer == 'B' || answer == 'C' || answer == 'D') {
                 if (answer == currentLevel.questions[j].correctAnswer) {
                     cout << "Correct! You're n fire +" << currentLevel.pointsForAnswer << " points\n";
@@ -147,12 +152,14 @@ void executeGame() {
                 }
             } else {
                 cout << "Please enter a valid answer (A, B, C or D).\n";
-                --j;
+                --j; // Volver a intentar esta misma pregunta
             }
         }
 
+        // Se suma al total solo si completó el nivel
         finalPoints += pointsLevel;
 
+         //Se muestra resumen del nivel: aciertos y puntos acumulados.
         cout << "\n You have completed level " << currentLevel.numbers << "!\n";
         cout << "Correct answers: " << rightAnswer << "/5\n";
         cout << "Points earned in this level: " << pointsLevel << "\n";
@@ -160,11 +167,11 @@ void executeGame() {
 
         if (i < NUM_LEVELS - 1) {
             char next;
-            cout << "Continue to the next level? (Y/N): ";
+            cout << "Continue to the next level? (Y/N): "; //Si no es el último nivel, se le pregunta al usuario si quiere seguir.
             cin >> next;
 
             if (toupper(next) != 'Y') {
-                cout << "\nYou decided to quit the game.\n";
+                cout << "\nYou decided to quit the game.\n"; //Si dice que no (N o cualquier letra distinta de S), se termina el juego.
                 cout << "Total accumulated score: " << finalPoints << " points.\n";
                 cout << "Thanks for playing! :D\n";
                 return;
@@ -172,6 +179,7 @@ void executeGame() {
         }
     }
 
+    // Si llega hasta aquí, completó todos los niveles
     cout << "Congratulations! You've completed all levels.\n";
     cout << "Final score: " << finalPoints << " points.\n";
 }
