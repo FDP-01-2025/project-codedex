@@ -57,8 +57,8 @@ The game consists of overcoming a series of levels with increasing difficulty by
 - **Team name:** Codedex ++
 
 ## Mockups 
-![alt text](image.png)
-![alt text](image-1.png)
+![alt text](mockup1.jpg)
+![alt text](mockup2.jpg)
 
 ### Team Members
 
