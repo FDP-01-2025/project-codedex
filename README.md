@@ -73,3 +73,6 @@ The game consists of overcoming a series of levels with increasing difficulty by
 1. Clone this repository to your local machine:  
    ```bash
    git clone [https://github.com/FDP-01-2025/project-codedex.git]
+
+   2. Presentación :
+   https://www.canva.com/design/DAGr8wkIdUQ/Nrm4EaUmXiVbjTqOJtLWDQ/edit?utm_content=DAGr8wkIdUQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
