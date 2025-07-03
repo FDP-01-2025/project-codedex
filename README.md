@@ -60,6 +60,9 @@ The game consists of overcoming a series of levels with increasing difficulty by
 ![alt text](mockup1.jpg)
 ![alt text](mockup2.jpg)
 
+### Flujograma
+https://drive.google.com/file/d/1Q_IWubEx9-aM5nZsmwQdKFLnxg-LitbV/view?usp=sharing
+
 ### Team Members
 
 1. **Full name:** Ortiz Reyes, Guillermo Andrés  
